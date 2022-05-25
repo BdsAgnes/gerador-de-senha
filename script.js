@@ -1,13 +1,13 @@
 let sliderElement = document.querySelector("#slider");
 let buttonElement = document.querySelector("#button");
 
-let sizePassword = Document.querySelector("#valor");
+let sizePassword = document.querySelector("#valor");
 
-let Password = Document.querySelector("#password");
+let Password = document.querySelector("#Password");
 
-let containerPassword = Document.querySelector("#container-password");
+let containerPassword = document.querySelector("#container-password");
 
-let charset="agbcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@!";
+let charset = "agbcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@!";
 
 let novaSenha = "";
 
@@ -23,9 +23,7 @@ function generatePassword(){
 
     for(let i = 0, n = charset.length; i < sliderElement.value; ++i){
         pass += charset.charAt(Math.floor(Math.random() * n));
-
-
-    }
+     }
 
     containerPassword.classList.remove("hide");
 
@@ -36,5 +34,5 @@ function generatePassword(){
 
 function copyPassword(){
     alert("senha copiada com sucesso!")
-    navigator.clipboard.writeText(novaSenha)
+    navigator.clipboard.writeText(novaSenha);
 }
